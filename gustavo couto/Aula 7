@@ -1,0 +1,28 @@
+# manipular_texto = input("Coloque uma frase: ")
+# print(manipular_texto.strip().lower())
+# Exemplo 1:
+# Crie um programa que leia o conteúdo de um arquivo de texto e conte quantas vezes a palavra "Python" aparece no arquivo. Exiba o resultado para o usuário.
+# print("Contagem de palavras em arquivo")
+# with open("notas.txt", "r", encoding="utf-8") as texto:
+#     conteudo = texto.read()
+#     contagem = conteudo.count("Python")
+#     contagem = conteudo.upper().count("PYTHON")
+#     contagem = conteudo.lower().count("python")
+#     print(f"A contagem de palavras {contagem} é de...")
+# Onde estou?
+import os
+# print(os.getcwd())
+
+# print(os.listdir())
+# print(os.listdir("C:/Users"))
+
+# Criar pastas
+# os.mkdir("Nova_Pasta")
+# Criar arquivos
+
+# Renomear pastas
+# os.rename("nigga" , "Minha_pasta")
+# os.remove("notas.text")
+# Apagar pastas
+# os.rmdir("Minha_Pasta")
+# os.remove("notas.txt") #Excluir arquivos

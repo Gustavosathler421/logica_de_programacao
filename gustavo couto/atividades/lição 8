@@ -1,0 +1,172 @@
+# Tratamento de Erros e Exceções
+# valor1 = int(input("Digite o primeiro valor: "))
+# valor2 = int(input("Digite o segundo valor: "))
+# resultado = valor1 / valor2
+# print(f"O resultado da divisão é: {resultado}")
+# O código acima pode gerar um erro de divisão por zero se o usuário digitar 0 para o segundo valor. Para tratar esse erro, podemos usar um bloco try-except:
+# Exemplo 1: Tratamento de divisão por zero
+# try:
+#     valor1 = int(input("Digite o primeiro valor: "))
+#     valor2 = int(input("Digite o segundo valor: "))
+#     resultado = valor1 / valor2
+#     print(f"O resultado da divisão é: {resultado}")
+# except ZeroDivisionError:
+#     print("Erro: Não é possível dividir por zero.")
+
+#  Exemplo 2: Tratamento de entrada inválida
+# try:
+#     valor1 = int(input("Digite o primeiro valor: "))
+#     valor2 = int(input("Digite o segundo valor: "))
+#     resultado = valor1 / valor2
+#     print(f"O resultado da divisão é: {resultado}")
+# except ValueError:
+#     print("Erro de valor: Por favor, digite um número inteiro válido.")
+# except ZeroDivisionError:
+#     print("Erro: Não é possível dividir por zero.")
+
+#  Exemplo 3: Tratamento de múltiplas exceções
+# try:
+#     valor1 = int(input("Digite o primeiro valor: "))
+#     valor2 = int(input("Digite o segundo valor: "))
+#     resultado = valor1 / valor2
+#     print(f"O resultado da divisão é: {resultado}")
+# except (ValueError, ZeroDivisionError) as e:
+#     print(f"Erro de valor: Por favor, digite um número inteiro válido. {e} ou Erro: Não é possível dividir por zero. {e}")
+
+# Exemplo 4: Uso do bloco finally
+# try:
+#     valor1 = int(input("Digite o primeiro valor: "))
+#     valor2 = int(input("Digite o segundo valor: "))
+#     resultado = valor1 / valor2
+#     print(f"O resultado da divisão é: {resultado}")
+# except (ValueError, ZeroDivisionError) as e:
+#     print(f"Erro de valor: Por favor, digite um número inteiro válido. {e} ou Erro: Não é possível dividir por zero. {e}")
+# finally:
+#     print("Bloco finally executado.")
+# Exercicio 1:
+# Crie um algoritmo que pergunte o seu nome e trate erro ao inserir valores incorretos
+# primeiro_nome = input("Digite seu primeiro nome:")
+# sobrenome = input("Digite seu sobrenome:")
+# nome_completo = f"{primeiro_nome} {sobrenome}"
+# try:
+    
+#     print(f"Olá, {nome_completo}!")
+# except Exception as e:
+#     print(f"Ocorreu um erro: {e}")
+
+# # Exemplo 5: TypeError
+# try:
+#     resultado = "5" + 10
+# except TypeError as e:
+#     print(f"Erro de tipo: {e}")
+# Projeto 1:
+# Projeto: Precisamos de um algoritmo para gerenciamento de cancelas para um shopping.
+# Toda entrada e saída irá ser sinalizada
+# Valores para entrada e permanência do veículo deverá ser pergutado 
+# As entrada deverão ser registradas por placa.
+# 
+# Passo 1:  
+# Perguntar informações sobre o veiculo ou forma acesso
+# Pressionar o botao para emitir ticket
+# Verificar se possui TAG para acesso liberado 
+# Se possuir erros informar ao usuario
+
+# Passo 2:
+# Verificar tempo de permanencia
+# Valor a ser cobrado
+
+# Passo 3:
+# Saida como sera?
+# Calcular tempo de permanencia
+# Se for tag gerar na fatura da tag
+# Pagar ticket
+# Devolver ticket na saida
+
+# Passo 4:
+# Gerar relatorio de entradas e saidas
+# Tratamento de Erros
+# Revisão do código
+
+estacionamento = {
+    "vagas_totais": 100,
+    "vagas_ocupadas": 0,
+    "veiculos": {} 
+}
+tags_cadastradas = ["TAG123", "TAG456", "ABC789"] 
+
+def registrar_entrada():
+    print("\n--- INICIANDO ENTRADA ---")
+    placa = input("Digite a placa do veículo: ").upper()
+
+    tem_tag = input("Possui TAG automática? (s/n): ").lower()
+    
+    if tem_tag == 's':
+        tag_id = input("Aproxime a TAG (digite o código): ")
+        if tag_id in tags_cadastradas:
+            print(f"TAG {tag_id} reconhecida. Acesso livre para placa {placa}.")
+            tipo = "TAG"
+        else:
+            print("Erro: TAG inválida ou não cadastrada. Solicitando ticket...")
+            tipo = "Ticket"
+    else:
+        tipo = "Ticket"
+
+    if tipo == "Ticket":
+        print(f"Ticket emitido para placa {placa}. Hora: {datetime.datetime.now().strftime('%H:%M:%S')}")
+    
+    
+    if estacionamento["vagas_ocupadas"] < estacionamento["vagas_totais"]:
+        estacionamento["veiculos"][placa] = {
+            "entrada": datetime.datetime.now(),
+            "tipo": tipo
+        }
+        estacionamento["vagas_ocupadas"] += 1
+        print("Cancela aberta. Veículo entrou.")
+    else:
+        print("Erro: Estacionamento lotado!")
+
+def realizar_saida():
+    print("\n--- INICIANDO SAÍDA ---")
+    placa = input("Digite a placa para saída: ").upper()
+    
+    if placa not in estacionamento["veiculos"]:
+        print("Erro: Veículo não encontrado no estacionamento.")
+        return
+
+    
+    info = estacionamento["veiculos"][placa]
+    tempo_entrada = info["entrada"]
+    tempo_atual = datetime.datetime.now()
+    duracao = tempo_atual - tempo_entrada
+    
+    print(f"Tempo de permanência: {duracao.total_seconds() / 60} minutos.")
+    
+    if info["tipo"] == "TAG":
+        print("Pagamento automático realizado via TAG.")
+    else:
+    
+        valor = 10.0 # Exemplo: R$10,00
+        print(f"Valor a pagar: R${valor}")
+        input("Pressione Enter para confirmar pagamento...")
+    
+    del estacionamento["veiculos"][placa]
+    estacionamento["vagas_ocupadas"] -= 1
+    print("Cancela de saída aberta. Obrigado.")
+
+while True:
+    opcao = input("\n1. Entrada\n2. Saída\n3. Sair\nEscolha: ")
+    if opcao == '1':
+        registrar_entrada()
+    elif opcao == '2':
+        realizar_saida()
+    elif opcao == '3':
+        break
+
+
+
+
+    
+
+ 
+
+

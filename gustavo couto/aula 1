@@ -1,0 +1,38 @@
+#primeira aula de python 
+#comandos
+# print("Meu é nome:stephen hawking \n")
+# print ("meu curso é de Desenvolvimento de Sistemas \n")
+# print ("eu tenho 16 anos de cadeia"  + "  e eu gosto de jogar\n ")
+# print ("e eu criei a lei do duende:quem bola,acende")
+# print ("somar valores",1234568989+98756214231)
+# print ("multiplicar valores",2*2)
+# print ("dividir valores",3/3)
+# print ("subtrair valores",18-9)
+print ("cálculos")
+print ("iniciar Cálculos")
+input ("Digite o primeiro valor:")
+# variáveis
+# armazenar informações
+# input permite inserir valores númericos ou strings (textos)
+
+pv1= int(input ("Digite o primeiro valor: \n"))
+pv2 = int(input ("Digite o segundo valor: \n"))
+print("O resultado da soma é:", pv1+pv2)
+print ("O resultado da subtração é:", pv1-pv2)
+
+# variaveis com textos
+mult1 = int(input ("Digite o terceiro valor: \n"))
+mult2 = int(input ("Digite o quarto valor: \n"))
+mtotal = mult1 * mult2
+print ("O valor da multiplicação é: " , mtotal)
+
+# Exercicio 1
+#
+
+
+
+
+
+
+
+

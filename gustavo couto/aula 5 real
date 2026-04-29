@@ -1,0 +1,88 @@
+7# print = "Função de saida  de dados para o console"
+# input = "Função de entrada com dados do usuarios via teclado"
+# if = "Estrutura de decisão"
+
+
+# Exemplo 2 com print e input:
+# nome = input("Digite seu nome:")
+# # print(f"Ola, {nome}! Bem vindo á aula de Python para desenvolvimento de sistemas!")
+
+# Exemplo 2: com if elif e else
+# nota = float(input("Digite a nota do aluno:"))
+# if nota>= 7:
+#     print("Aluno aprovado")
+# elif nota >= 5:
+#     print("Aluno em recuperação")
+# else:
+#     print("Aluno reprovado")
+
+
+# import time
+# temperatura = 25
+# while temperatura < 40:
+#     print(f"Temperatura atual: {temperatura} °C. Sistema operando...")
+#     time.sleep(1)
+#     temperatura += 3 #Simulando o aquecimento da máquina
+# print ("ALERTA! Temperatura atingiu o limite. desligando o motor...")
+
+# leituras = [70,75,82,98,110,85,85]
+# for temp in leituras:
+#     while temp > 100:
+#         print(f"CRÍTICO: {temp}°C.detectado! Adicionado parada de emêrgencia")
+#         break 
+#     print(f"Temperatura está em {temp}°C.Operação normal.")
+# print("Sistema desligado. Aguardando manutenção.")
+ 
+#Exercicio 1 
+# for sensor in range(1,11):
+#     if sensor == 5:
+
+#         print(f"Sensor nº{sensor} com falha")
+#         continue
+#     print(f"Sensor{sensor} sem falha")
+    
+# print("Fim!") 
+# import time
+# cores = {"verde","vermelho","amarelo"}
+# print("Iniciando simulador de semáforo(Defeituoso)")
+# print("O amarelo esta com defeito")
+# while True:
+#     for cor in cores:
+#         if cor == "amarelo":
+#             print(f"[{cor}] - Lampada queimada! Pulando para o próximo...")
+#             continue
+#         if cor == "verde":
+#             print(f"[{cor}] - Siga com responsabilidade.")
+#             time.sleep(3)
+            
+#         elif cor == "vermelho":
+#             print(f"[{cor}] - PARE!")
+#             time.sleep(3)
+        
+#         print("---Ciclo reiniciado---")
+
+#Exercicio 3
+# total_consumo = 0
+# for maquina in(1,6):
+#     consumo = float(input(f"Digite o consumo em kwh da máquina {maquina}"))
+#     total_consumo += consumo
+# print(f"O consumo total da fábrica é de {total_consumo}kwh.")
+
+#Exercicio 4
+# pecas = [50.1,49.8,52.0,50.0,48.5]
+# for medida in pecas:
+#     if medida >= 50.0:
+#         print(f"Peça com medida {medida}nm: Aprovada")
+#     else:
+#         print(f"Peça com medida{medida}nm: Rejeitada")
+# print("Fim da avaliação")
+
+#Exercicio 5
+# total_sacos = 6
+# limite_inferior = 48.0
+# limite_superior = 52.0
+# saco_dentro = 0
+
+# print(f"---")
+
+#Exercicio 6

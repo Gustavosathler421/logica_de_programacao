@@ -1,0 +1,171 @@
+# print("Verificar idade"
+# idade = int(input("Digite sua idade"
+
+# if idade >= 18:
+#     print "Voce é maior de idade"
+# else:
+#      print("Voce não é maior de idade")
+
+
+# 
+# int("Calculadora pra colar na prova muahahahah")
+# print("Operadores disponiveis: + - * /")
+
+# operador = input("Digite o operador desejado:")
+# nm1 = input("Digite o primeiro numero")
+# nm2 = input("DIgite o segundo numero")
+
+# if operador == "+":
+#     resultado = nm1 + nm2
+#     print("Resultado:", resultado)
+
+# elif operador == "-":
+#     resultado = nm1 - nm2
+#     print("Resultado:", resultado)
+
+# elif operador == "*":
+#     resultado = nm1 * nm2
+#     print("Resultado:", resultado)
+
+# elif   operador == "/":
+#     resultado = nm1/nm2
+#     print("Resultado:", resultado)
+
+# print("Prova")
+# smt1 = float(input("primeira prova"))
+# smt2 = float(input("segunda prova"))
+# smtotal = (smt1 +smt2)/2
+
+# if smtotal >= 50:
+#     print("Aprovado")
+
+# else:
+#     print("Reprovado")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ 
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

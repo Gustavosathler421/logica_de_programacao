@@ -1,0 +1,27 @@
+#Exercicio
+# print("Contador de produção:")
+# for peca in range(1,11):
+#     print(f"Peça nº {peca} processada com sucesso")
+# print("Ciclo de produção concluido")
+
+# print("Mercado do seu Isaias")
+
+
+
+# for ban in range(1,11):
+#     print(f"{ban}")
+
+# for man in range(1,11):
+#     print(f"{ban}")
+
+# total = ban + man
+
+#Exercicio 3
+print("tabuada")
+tab = int(input("digite a tabuada:"))
+
+for numero in range(1,11):
+    resultado = tab * numero
+
+    print(f" {tab} x {numero} = {resultado}")
+    

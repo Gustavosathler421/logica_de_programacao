@@ -1,0 +1,11 @@
+print = "Função de saida  de dados para o console"
+input = "Função de entrada com dados do usuarios via teclado"
+if = "Estrutura de decisão"
+
+
+Exemplo 2 com print e input:
+nome = input("Digite seu nome:")
+# print(f"Ola, {nome}! Bem vindo á aula de Python para desenvolvimento de sistemas!")
+
+Exemplo 2: com if elif e else
+

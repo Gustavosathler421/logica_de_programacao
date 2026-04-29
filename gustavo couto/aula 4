@@ -1,0 +1,54 @@
+for lote in range(1, 6):
+    print(f"Processando lote número {lote}...")
+    print(f"Quantidade verificada. [OK]")
+    print("Produção do dia finalizada!")
+
+
+#exemplo 2
+# for b in range(10):
+#     print(f"quantidade total {b} foi...")
+
+# exercicio 3
+
+# for vinil in range (1,21):
+#     print(f"produção de {vinil}, diária")
+
+# Exercico 4
+# pecas = ["Engrenagem","Eixo","rolamento","parafuso","martelo","prego","chave de fenda"]
+
+
+# for item in pecas:
+#     print(f"Item estoque:{item}")
+
+#exercicio 5
+
+# print("Menu do restaurante")
+# pdd = input("Escolha entre comidas,Bebidas ou sobremesas:")
+
+# comidas = ["Marmita basica","Macarronada", "rodizio"]
+
+# bebidas = ["Guaraná Jesus","Tubaina","Heineken"]
+
+# sobremesas = ["Bolo","Sorvete","Mousse"]
+
+# if pdd == "comidas":
+#     for item in comidas:
+#         print(f"{item}")
+
+
+
+# elif pdd == "bebidas":
+#     for item in bebidas:
+#         print(f"{item}")
+
+# elif pdd == "sobremesas":
+#     for item in sobremesas:
+#         print(f"{item}")
+
+# else:
+#     print("Não escolheu nada")
+
+
+
+
+
